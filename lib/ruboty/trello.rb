@@ -8,7 +8,7 @@ end
 module Ruboty
   module Handlers
     class Trello < Base
-      on /trello b (?<board_name>.*) l (?<list_name>.*) (?<name>.*)\z/i, name: 'trello', description: 'Add card to Trello'
+      on /trello\s+b\s+(?<board_name>.*)\s+l\s+(?<list_name>.*)\s+c\s+(?<name>.*)\z/i, name: 'trello', description: 'Add card to Trello'
 
       def trello(message)
         me = ::Trello::Member.find('me')
