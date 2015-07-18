@@ -30,7 +30,7 @@ Or install it yourself as:
 
 ```
 TRELLO_DEVELOPER_PUBLIC_KEY - Developer API Key
-TRELLO_MEMBER_TOKEN - Member Token
+TRELLO_MEMBER_TOKEN - Member Token (require read&write scope)
 ```
 
 see https://github.com/jeremytregunna/ruby-trello#configuration to get these keys
