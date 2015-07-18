@@ -34,7 +34,11 @@ module Ruboty
           member_id = member.try(:id)
         end
 
-        ::Trello::Card.create(name: message[:name], list_id: list.id, member_ids: member_id)
+        new_card = ::Trello::Card.create(name: message[:name], list_id: list.id, member_ids: member_id)
+        if new_card.short_url
+          prefix = ENV['TRELLO_RESPONSE_PREFIX'] || 'Created'
+          message.reply "#{prefix} #{new_card.short_url}"
+        end
       end
     end
   end
