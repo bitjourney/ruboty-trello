@@ -38,7 +38,7 @@ see https://github.com/jeremytregunna/ruby-trello#configuration to get these key
 ### optional
 
 ```
-TRELLO_AUTO_ASSIGN - if set to '1', assigns sender with created card
+TRELLO_AUTO_ASSIGN - If set to '1', assigns sender with created card
 TRELLO_RESPONSE_PREFIX - Specify response message (default is 'Created')
 ```
 
