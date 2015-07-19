@@ -25,7 +25,16 @@ module Ruboty
           return
         end
 
-        ::Trello::Card.create(name: message[:name], list_id: list.id)
+        member_id = nil
+        if ENV['TRELLO_AUTO_ASSIGN'] && message.from_name
+          sender = message.from_name.downcase
+          member = board.members.find do |member|
+            member.username.downcase == sender || member.full_name.downcase.include?(sender)
+          end
+          member_id = member.try(:id)
+        end
+
+        ::Trello::Card.create(name: message[:name], list_id: list.id, member_ids: member_id)
       end
     end
   end

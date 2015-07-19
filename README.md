@@ -26,12 +26,20 @@ Or install it yourself as:
 
 ## ENV
 
+### required
+
 ```
 TRELLO_DEVELOPER_PUBLIC_KEY - Developer API Key
 TRELLO_MEMBER_TOKEN - Member Token
 ```
 
 see https://github.com/jeremytregunna/ruby-trello#configuration to get these keys
+
+### optional
+
+```
+TRELLO_AUTO_ASSIGN - if set to '1', assigns sender with created card
+```
 
 ## Contributing
 
