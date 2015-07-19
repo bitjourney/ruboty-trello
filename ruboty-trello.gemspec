@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'ruboty-trello'
   spec.version       = Ruboty::Trello::VERSION
   spec.authors       = ['Masahiro Ihara']
-  spec.email         = ['ihara@bitjourney.com']
+  spec.email         = ['tech@bitjourney.com']
 
   spec.summary       = %q{Ruboty plugin for adding a new card to Trello}
   spec.description   = %q{Ruboty plugin for adding a new card to Trello}
