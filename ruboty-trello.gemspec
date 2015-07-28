@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Ruboty plugin for adding a new card to Trello}
   spec.description   = %q{Ruboty plugin for adding a new card to Trello}
-  spec.homepage      = 'http://github.com/bitjourney/ruboty-trello'
+  spec.homepage      = 'https://github.com/bitjourney/ruboty-trello'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
