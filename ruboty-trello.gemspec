@@ -5,7 +5,7 @@ require 'ruboty/trello/version'
 Gem::Specification.new do |spec|
   spec.name          = 'ruboty-trello'
   spec.version       = Ruboty::Trello::VERSION
-  spec.authors       = ['Masahiro Ihara']
+  spec.authors       = ['Masahiro Ihara', 'Takaya Deguchi']
   spec.email         = ['ihara@bitjourney.com', 'dex1t@degoo.org']
 
   spec.summary       = %q{Ruboty plugin for adding a new card to Trello}
