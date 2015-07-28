@@ -5,12 +5,12 @@ require 'ruboty/trello/version'
 Gem::Specification.new do |spec|
   spec.name          = 'ruboty-trello'
   spec.version       = Ruboty::Trello::VERSION
-  spec.authors       = ['Masahiro Ihara']
+  spec.authors       = ['Masahiro Ihara', 'Takaya Deguchi']
   spec.email         = ['ihara@bitjourney.com', 'dex1t@degoo.org']
 
   spec.summary       = %q{Ruboty plugin for adding a new card to Trello}
   spec.description   = %q{Ruboty plugin for adding a new card to Trello}
-  spec.homepage      = 'http://github.com/bitjourney/ruboty-trello'
+  spec.homepage      = 'https://github.com/bitjourney/ruboty-trello'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
