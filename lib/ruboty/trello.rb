@@ -26,7 +26,7 @@ module Ruboty
         end
 
         label = board.labels.find { |label| label.name == message[:label_name] }
-        label_id = label.nil? ? nil : label.id
+        label_id = label&.id
 
         member_id = nil
         if ENV['TRELLO_AUTO_ASSIGN'] && message.from_name
@@ -34,7 +34,7 @@ module Ruboty
           member = board.members.find do |member|
             member.username.downcase == sender || member.full_name.downcase.include?(sender)
           end
-          member_id = member.try(:id)
+          member_id = member&.id
         end
 
         new_card = ::Trello::Card.create(name: message[:name], list_id: list.id, card_labels: label_id, member_ids: member_id)
