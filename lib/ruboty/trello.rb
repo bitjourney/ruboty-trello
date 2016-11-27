@@ -8,7 +8,7 @@ end
 module Ruboty
   module Handlers
     class Trello < Base
-      on /trello\s+b\s+(?<board_name>.*?)\s+l\s+(?<list_name>.*?)\s+(lb\s+(?<label_name>.*?)\s+)?c\s+(?<name>.*)\z/i, name: 'trello', description: 'Add card to Trello'
+      on /trello\s+b\s+(?<board_name>.*?)\s+l\s+(?<list_name>.*?)\s+(lb\s+(?<label_name>.*?)\s+)?(dt\s+(?<due_time>.*?)\s+)?c\s+(?<name>.*)\z/, name: 'trello', description: 'Add card to Trello'
 
       def trello(message)
         me = ::Trello::Member.find('me')
@@ -37,7 +37,9 @@ module Ruboty
           member_id = member&.id
         end
 
-        new_card = ::Trello::Card.create(name: message[:name], list_id: list.id, card_labels: label_id, member_ids: member_id)
+        iso8601_time = Time.parse(message[:due_time]).iso8601 rescue nil
+
+        new_card = ::Trello::Card.create(name: message[:name], list_id: list.id, card_labels: label_id, member_ids: member_id, due: iso8601_time)
         if new_card.short_url
           prefix = ENV['TRELLO_RESPONSE_PREFIX'] || 'Created'
           message.reply "#{prefix} #{new_card.short_url}"

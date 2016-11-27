@@ -21,7 +21,7 @@ Or install it yourself as:
 ## Usage
 
 ```
-@ruboty trello b <board_name> l <list_name> (lb <label_name>) c <card_name>
+@ruboty trello b <board_name> l <list_name> (lb <label_name>) (dt <due_time>) c <card_name>
 ```
 
 ## ENV
