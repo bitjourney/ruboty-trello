@@ -42,6 +42,17 @@ TRELLO_AUTO_ASSIGN - If set to '1', assigns sender with created card
 TRELLO_RESPONSE_PREFIX - Specify response message (default is 'Created')
 ```
 
+## Valid Value
+### dd \<due_date\>
+`YYYY-MM-DD` or `YYYY-MM-DD HH:MM`
+
+Example
+
+```
+dd 2016-01-01
+dd 2016-01-01 01:02
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/bitjourney/ruboty-trello/fork )
