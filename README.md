@@ -24,6 +24,16 @@ Or install it yourself as:
 @ruboty trello b <board_name> l <list_name> (lb <label_name>) (dd <due_date>) c <card_name>
 ```
 
+e.g.
+
+
+```
+@ruboty trello b development l icebox c something
+@ruboty trello b development l icebox dd 2016-01-01 c something
+@ruboty trello b development l icebox dd 2016-01-01 01:02 c something
+```
+
+
 ## ENV
 
 ### required
@@ -40,17 +50,6 @@ see https://github.com/jeremytregunna/ruby-trello#configuration to get these key
 ```
 TRELLO_AUTO_ASSIGN - If set to '1', assigns sender with created card
 TRELLO_RESPONSE_PREFIX - Specify response message (default is 'Created')
-```
-
-## Valid Value
-### dd \<due_date\>
-`YYYY-MM-DD` or `YYYY-MM-DD HH:MM`
-
-Example
-
-```
-dd 2016-01-01
-dd 2016-01-01 01:02
 ```
 
 ## Contributing
