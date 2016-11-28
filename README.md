@@ -31,6 +31,7 @@ e.g.
 @ruboty trello b development l icebox c something
 @ruboty trello b development l icebox dd 2016-01-01 c something
 @ruboty trello b development l icebox dd 2016-01-01 01:02 c something
+@ruboty trello b development l icebox lb feature dd 2016-01-01 01:02 c something
 ```
 
 
