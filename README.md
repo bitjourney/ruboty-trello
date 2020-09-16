@@ -40,6 +40,7 @@ see https://github.com/jeremytregunna/ruby-trello#configuration to get these key
 ```
 TRELLO_AUTO_ASSIGN - If set to '1', assigns sender with created card
 TRELLO_RESPONSE_PREFIX - Specify response message (default is 'Created')
+TRELLO_MEMBER_FROM_SENDER - JSON for sender to Trello member mapping (ex: {"ihara":"masahiroihara", "taro":"taroyamada"})
 ```
 
 ## Contributing
