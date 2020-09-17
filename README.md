@@ -43,6 +43,13 @@ TRELLO_RESPONSE_PREFIX - Specify response message (default is 'Created')
 TRELLO_MEMBER_FROM_SENDER - JSON for sender to Trello member mapping (ex: {"ihara":"masahiroihara", "taro":"taroyamada"})
 ```
 
+## How to develop
+
+You have to set TRELO_DEVELOPER_PUBLIC_KEY and TRELLO_MEMBER_TOKEN, set other environment variables if you need. 
+```
+>  TRELLO_DEVELOPER_PUBLIC_KEY=xxx TRELLO_MEMBER_TOKEN=xxx bundle exec ruboty -l lib/rutoby/trello.rb
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/bitjourney/ruboty-trello/fork )
