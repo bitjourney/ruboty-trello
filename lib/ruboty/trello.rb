@@ -31,9 +31,7 @@ module Ruboty
         member_id = nil
         if ENV['TRELLO_AUTO_ASSIGN'] && message.from_name
           sender = message.from_name.downcase
-          member = board.members.find do |member|
-            member.username.downcase == sender || member.full_name.downcase.include?(sender)
-          end
+          member = find_member(board.members, sender)
           member_id = member&.id
         end
 
@@ -43,6 +41,20 @@ module Ruboty
         if new_card.short_url
           prefix = ENV['TRELLO_RESPONSE_PREFIX'] || 'Created'
           message.reply "#{prefix} #{new_card.short_url}"
+        end
+      end
+
+      def find_member(members, sender)
+        # SlackのDisplay NameとTrelloのUsernameのマッピング
+        senders_to_members = {}
+        if ENV['TRELLO_MEMBER_FROM_SENDER']
+          senders_to_members = JSON.parse(ENV['TRELLO_MEMBER_FROM_SENDER'])
+        end
+        members.find do |member|
+          # sender: SlackのDisplay Name
+          # member.username: TrelloのUsername
+          # member.full_name: AtlassianのPublic Name
+          member.username.downcase == senders_to_members[sender] || member.username.downcase == sender || member.full_name.downcase == sender
         end
       end
     end
