@@ -21,8 +21,19 @@ Or install it yourself as:
 ## Usage
 
 ```
-@ruboty trello b <board_name> l <list_name> (lb <label_name>) c <card_name>
+@ruboty trello b <board_name> l <list_name> (lb <label_name>) (dd <due_date>) c <card_name>
 ```
+
+e.g.
+
+
+```
+@ruboty trello b development l icebox c something
+@ruboty trello b development l icebox dd 2016-01-01 c something
+@ruboty trello b development l icebox dd 2016-01-01 01:02 c something
+@ruboty trello b development l icebox lb feature dd 2016-01-01 01:02 c something
+```
+
 
 ## ENV
 
