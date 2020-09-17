@@ -45,13 +45,13 @@ module Ruboty
       end
 
       def find_member(members, sender)
-        # SlackのDisplay NameとTrelloのUsernameのマッピング
+        # SlackのUsernameとTrelloのUsernameのマッピング
         senders_to_members = {}
         if ENV['TRELLO_MEMBER_FROM_SENDER']
           senders_to_members = JSON.parse(ENV['TRELLO_MEMBER_FROM_SENDER'])
         end
         members.find do |member|
-          # sender: SlackのDisplay Name
+          # sender: SlackのUsername
           # member.username: TrelloのUsername
           # member.full_name: AtlassianのPublic Name
           member.username.downcase == senders_to_members[sender] || member.username.downcase == sender || member.full_name.downcase == sender
