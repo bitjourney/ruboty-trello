@@ -58,7 +58,7 @@ TRELLO_MEMBER_FROM_SENDER - JSON for sender to Trello member mapping (ex: {"ihar
 
 You have to set TRELO_DEVELOPER_PUBLIC_KEY and TRELLO_MEMBER_TOKEN, set other environment variables if you need. 
 ```
->  TRELLO_DEVELOPER_PUBLIC_KEY=xxx TRELLO_MEMBER_TOKEN=xxx bundle exec ruboty -l lib/rutoby/trello.rb
+>  TRELLO_DEVELOPER_PUBLIC_KEY=xxx TRELLO_MEMBER_TOKEN=xxx bundle exec ruboty -l lib/ruboty/trello.rb
 ```
 
 ## Contributing
